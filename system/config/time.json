@@ -1,0 +1,18 @@
+{
+    "timezone": "Asia/Seoul",
+    "locale": "ko-KR",
+    "format": {
+        "field":
+            {
+                "date": "YYYY-MM-DD",
+                "time": "HH:mm:ss",
+                "datetime": "YYYY-MM-DDTHH:mm:ss"
+            },
+        "filename":
+            {
+                "date": "YYYYMMDD",
+                "time": "HHmmss",
+                "datetime": "YYYYMMDD_HHmmss"
+            }
+        }
+}

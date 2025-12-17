@@ -1,0 +1,96 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.py.class
+
+# =========================
+# Virtual Environments
+# =========================
+.env
+.venv
+venv/
+ENV/
+env/
+
+# =========================
+# Environment variables
+# =========================
+.env.*
+!.env.example
+
+# =========================
+# FastAPI / ASGI
+# =========================
+*.log
+logs/
+uvicorn.log
+gunicorn.log
+
+# =========================
+# Cache / Test
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache/
+
+# =========================
+# Build / Distribution
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Database / Local Data
+# =========================
+*.sqlite3
+*.db
+data/
+uploads/
+
+# =========================
+# Docker
+# =========================
+docker-data/
+*.tar
+
+# =========================
+# Secrets / Certificates
+# =========================
+*.pem
+*.key
+*.crt
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+
+# =========================
+# Content
+# =========================
+content/facilities/buildings/*
+content/media/*
+system/info/*

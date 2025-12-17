@@ -1,0 +1,50 @@
+{
+  "iconTypes": {
+    "toiletMan": {
+      "id": "toiletMan",
+      "icon": "/content/facilities/icons/toilet_man.svg",
+      "label": "남자화장실",
+      "category": "facility",
+      "description": "남자 화장실 아이콘"
+    },
+    "toiletWoman": {
+      "id": "toiletWoman",
+      "icon": "/content/facilities/icons/toilet_woman.svg",
+      "label": "여자화장실",
+      "category": "facility",
+      "description": "여자 화장실 아이콘"
+    },
+    "restaurant": {
+      "id": "restaurant",
+      "icon": "/content/facilities/icons/dish-02.svg",
+      "label": "식당",
+      "category": "facility",
+      "description": "식당 아이콘"
+    },
+    "printer": {
+      "id": "printer",
+      "icon": "/content/facilities/icons/printer.svg",
+      "label": "복사기",
+      "category": "facility",
+      "description": "복사기/프린터 아이콘"
+    },
+    "currentLocation": {
+      "id": "currentLocation",
+      "icon": "/content/facilities/icons/current_location.svg",
+      "label": "현위치",
+      "category": "location",
+      "description": "현재 위치 표시 아이콘"
+    }
+  },
+  "categories": {
+    "facility": {
+      "name": "시설",
+      "description": "건물 내 시설물 아이콘"
+    },
+    "location": {
+      "name": "위치",
+      "description": "위치 표시 아이콘"
+    }
+  }
+}
+

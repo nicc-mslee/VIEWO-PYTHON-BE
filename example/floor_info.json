@@ -1,0 +1,128 @@
+[
+  {
+    "floor": 1,
+    "floorName": "1층",
+    "floorImage": "images/floors/image-8.svg",
+    "imageSize": {
+      "width": 931,
+      "height": 330
+    },
+    "createdAt": "2025-12-11T00:00:00.000Z",
+    "updatedAt": "2025-12-11T00:00:00.000Z",
+    "iconTypes": {
+      "toiletMan": {
+        "icon": "images/toilet_man.svg",
+        "label": "남자화장실"
+      },
+      "toiletWoman": {
+        "icon": "images/toilet_woman.svg",
+        "label": "여자화장실"
+      },
+      "currentLocation": {
+        "icon": "images/current_location.svg",
+        "label": "현위치"
+      },
+      "restaurant": {
+        "icon": "images/dish-02.svg",
+        "label": "식당"
+      }
+    },
+    "elements": [
+      {
+        "id": "element1f001",
+        "type": "text",
+        "text": "토지정보과",
+        "x1": 153,
+        "y1": 40,
+        "x2": 244,
+        "y2": 65,
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Pretendard",
+          "fontWeight": "normal",
+          "color": "#333333"
+        }
+      },
+      {
+        "id": "element1f002",
+        "type": "text",
+        "text": "민원과",
+        "x1": 80,
+        "y1": 153,
+        "x2": 135,
+        "y2": 178,
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Pretendard",
+          "fontWeight": "normal",
+          "color": "#333333"
+        }
+      },
+      {
+        "id": "element1f003",
+        "type": "text",
+        "text": "세정과",
+        "x1": 792,
+        "y1": 116,
+        "x2": 847,
+        "y2": 141,
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Pretendard",
+          "fontWeight": "normal",
+          "color": "#333333"
+        }
+      },
+      {
+        "id": "element1f004",
+        "type": "text",
+        "text": "총무과",
+        "x1": 728,
+        "y1": 223,
+        "x2": 783,
+        "y2": 248,
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Pretendard",
+          "fontWeight": "normal",
+          "color": "#333333"
+        }
+      },
+      {
+        "id": "element1f005",
+        "type": "icon",
+        "iconType": "toiletWoman",
+        "x1": 390,
+        "y1": 135,
+        "x2": 420,
+        "y2": 161
+      },
+      {
+        "id": "element1f006",
+        "type": "icon",
+        "iconType": "toiletMan",
+        "x1": 330,
+        "y1": 135,
+        "x2": 360,
+        "y2": 161
+      }
+    ],
+    "currentLocation": {
+      "enabled": true,
+      "x1":512,
+      "y1": 220,
+      "x2": 567,
+      "y2": 82,
+      "showLabel": true,
+      "labelText": "현위치",
+      "labelStyle": {
+        "fontSize": 11,
+        "fontFamily": "Pretendard",
+        "fontWeight": "bold",
+        "color": "#000000",
+        "backgroundColor": "#FFEB3B",
+        "borderRadius": 12
+      }
+    }
+  }
+]

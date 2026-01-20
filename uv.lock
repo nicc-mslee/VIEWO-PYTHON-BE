@@ -34,8 +34,8 @@ wheels = [
 ]
 
 [[package]]
-name = "be-v02"
-version = "0.1.0"
+name = "be-v0-0-3"
+version = "0.0.3"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi" },

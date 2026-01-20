@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 import logging
 
 from app.config.settings import APP_CONFIG, SERVER_CONFIG
@@ -60,10 +61,25 @@ app.include_router(floor_plan.router)
 DEPARTMENTS_DIR = CONTENT_DIR / "departments"
 FACILITIES_DIR = CONTENT_DIR / "facilities"
 MEDIA_DIR = CONTENT_DIR / "media"
+STATIC_DIR = CONTENT_DIR.parent / "static"
 
 app.mount("/content/departments", StaticFiles(directory=str(DEPARTMENTS_DIR)), name="departments")
 app.mount("/content/facilities", StaticFiles(directory=str(FACILITIES_DIR)), name="facilities")
 app.mount("/content/media", StaticFiles(directory=str(MEDIA_DIR)), name="media")
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+
+# # Admin SPA Handling
+# @app.get("/admin/{full_path:path}")
+# async def serve_admin(full_path: str):
+#     """Admin SPA Serving"""
+#     # 1. Try to serve static file if explicitly requested (e.g. /admin/css/style.css)
+#     # We map /admin/* to be/static/*
+#     target_file = STATIC_DIR / full_path
+#     if full_path and target_file.exists() and target_file.is_file():
+#         return FileResponse(target_file)
+    
+#     # 2. Fallback to index.html for client-side routing
+#     return FileResponse(STATIC_DIR / "index.html")
 
 @app.get("/")
 async def root():

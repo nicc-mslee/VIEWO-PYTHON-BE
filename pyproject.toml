@@ -1,6 +1,6 @@
 [project]
-name = "be_v02"
-version = "0.1.0"
+name = "be_v0.0.3"
+version = "0.0.3"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -8,4 +8,5 @@ dependencies = [
     "fastapi>=0.124.4",
     "python-multipart>=0.0.20",
     "uvicorn>=0.38.0",
+    "PyJWT>=2.8.0",
 ]

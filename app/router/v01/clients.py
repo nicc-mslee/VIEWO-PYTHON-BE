@@ -26,7 +26,7 @@ async def get_client_info(client_id: str):
         raise HTTPException(status_code=404, detail="클라이언트를 찾을 수 없습니다.")
     return {"code": 200, "data": client.to_dict()}
 
-@router.put("/{client_id}/alias")
+@router.patch("/{client_id}/alias")
 async def set_client_alias(client_id: str, alias_data: AliasRequest):
     """클라이언트 별칭 설정"""
     alias = alias_data.alias

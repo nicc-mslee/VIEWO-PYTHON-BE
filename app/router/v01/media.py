@@ -175,7 +175,7 @@ async def delete_image(image_type: ImageType, image_id: int):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"이미지 삭제 실패: {str(e)}")
 
-@router.put("/{image_type}/{image_id}/order")
+@router.patch("/{image_type}/{image_id}/order")
 async def update_image_order(
     image_type: ImageType, 
     image_id: int, 
@@ -200,7 +200,7 @@ async def update_image_order(
 
     raise HTTPException(status_code=404, detail="이미지를 찾을 수 없습니다.")
 
-@router.put("/{image_type}/{image_id}/name")
+@router.patch("/{image_type}/{image_id}/name")
 async def update_image_name(
     image_type: ImageType,
     image_id: int,

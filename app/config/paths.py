@@ -20,6 +20,10 @@ PR_MEDIA_DIR = MEDIA_DIR / "pr"
 # 부서 경로
 DEPARTMENTS_DATA_DIR = DEPARTMENTS_DIR
 
+# DB 경로
+DATA_DIR = BASE_DIR / "data"
+DB_PATH = DATA_DIR / "viewo.db"
+
 # 시스템 설정 파일 경로
 SYSTEM_ACCOUNT_DIR = SYSTEM_DATA_DIR / "account"
 SYSTEM_CONFIG_DIR = SYSTEM_DATA_DIR / "config"

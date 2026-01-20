@@ -82,7 +82,7 @@ async def get_building(building_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"건물 정보 조회 실패: {str(e)}")
 
-@router.put("/{building_id}")
+@router.patch("/{building_id}")
 async def update_building(building_id: str, building_data: dict):
     """건물 정보 수정"""
     try:
@@ -258,7 +258,7 @@ async def upload_building_floor_image(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"이미지 업로드 실패: {str(e)}")
 
-@router.put("/{building_id}/floors/{floor_number}")
+@router.patch("/{building_id}/floors/{floor_number}")
 async def update_building_floor(building_id: str, floor_number: int, floor_data: dict):
     """특정 건물의 청사도 데이터 저장"""
     try:

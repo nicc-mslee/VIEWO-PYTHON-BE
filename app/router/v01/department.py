@@ -1,9 +1,9 @@
 """부서 관리 라우터"""
 from fastapi import APIRouter, HTTPException, Query
 from typing import List, Optional
-from app.services.department_service import (
+from app.crud.department import (
     get_all_departments,
-    get_department_by_index,
+    get_department_by_id,
     create_department,
     update_department,
     delete_department,
@@ -27,11 +27,11 @@ async def get_departments(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"부서 목록 조회 실패: {str(e)}")
 
-@router.get("/{index}")
-async def get_department(index: int):
+@router.get("/{department_id}")
+async def get_department(department_id: int):
     """특정 부서 조회"""
     try:
-        department = get_department_by_index(index)
+        department = get_department_by_id(department_id)
         if department is None:
             raise HTTPException(status_code=404, detail="부서를 찾을 수 없습니다")
         return {"code": 200, "data": department}
@@ -46,16 +46,18 @@ async def create_department_endpoint(department: DepartmentCreate):
     try:
         department_data = department.dict(exclude_none=True)
         created = create_department(department_data)
+        if not created:
+             raise HTTPException(status_code=500, detail="부서 생성 실패")
         return {"code": 200, "data": created}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"부서 생성 실패: {str(e)}")
 
-@router.put("/{index}")
-async def update_department_endpoint(index: int, department: DepartmentUpdate):
+@router.patch("/{department_id}")
+async def update_department_endpoint(department_id: int, department: DepartmentUpdate):
     """부서 업데이트"""
     try:
         department_data = department.dict(exclude_none=True)
-        updated = update_department(index, department_data)
+        updated = update_department(department_id, department_data)
         if updated is None:
             raise HTTPException(status_code=404, detail="부서를 찾을 수 없습니다")
         return {"code": 200, "data": updated}
@@ -64,11 +66,11 @@ async def update_department_endpoint(index: int, department: DepartmentUpdate):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"부서 업데이트 실패: {str(e)}")
 
-@router.delete("/{index}")
-async def delete_department_endpoint(index: int):
+@router.delete("/{department_id}")
+async def delete_department_endpoint(department_id: int):
     """부서 삭제"""
     try:
-        success = delete_department(index)
+        success = delete_department(department_id)
         if not success:
             raise HTTPException(status_code=404, detail="부서를 찾을 수 없습니다")
         return {"code": 200, "message": "부서가 삭제되었습니다"}

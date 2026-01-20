@@ -14,7 +14,7 @@ async def get_themes():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.put("/themes/{theme_id}")
+@router.patch("/themes/{theme_id}")
 async def set_theme(theme_id: str):
     """현재 테마를 변경합니다."""
     try:
